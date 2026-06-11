@@ -184,12 +184,12 @@ function HomePage() {
         />
         <div className="hero-overlay absolute inset-0" />
         <div className="page-shell relative py-20">
-          <div className="glass-panel max-w-xl space-y-5 p-8 md:p-10">
+          <div className="bg-white/90 backdrop-blur-xl border border-white/50 rounded-2xl max-w-xl space-y-5 p-8 md:p-10 shadow-xl">
             <p className="eyebrow">Local trust</p>
             <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
               Proudly serving Arizona from Chandler.
             </h2>
-            <div className="space-y-3 text-sm leading-7 text-muted-foreground">
+            <div className="space-y-3 text-sm leading-7 text-foreground/95">
               <p className="flex items-start gap-3">
                 <MapPin className="mt-1 h-4 w-4 text-primary" />
                 <span>{site.address}</span>
