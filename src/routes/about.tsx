@@ -79,14 +79,22 @@ function AboutPage() {
             </h2>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {aboutAdvantages.map((item) => (
-              <Card key={item.title} className="service-card border-border/60">
-                <CardContent className="space-y-3 p-6">
-                  <h3 className="font-display text-xl font-semibold text-foreground">{item.title}</h3>
-                  <p className="text-sm leading-7 text-muted-foreground">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {aboutAdvantages.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Card key={item.title} className="service-card border-border/60">
+                  <CardContent className="space-y-4 p-6">
+                    <div className="icon-wrap h-12 w-12 shrink-0">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-display text-xl font-semibold text-foreground">{item.title}</h3>
+                      <p className="text-sm leading-6 text-muted-foreground">{item.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
