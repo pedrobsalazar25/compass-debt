@@ -1,7 +1,8 @@
-import { ArrowRight, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { FaqSection } from "@/components/faq-section";
+import { ProcessCarousel } from "@/components/process-carousel";
 import { ServiceShowcase } from "@/components/service-showcase";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -153,19 +154,8 @@ function HomePage() {
               How it works in five clear steps
             </h2>
           </div>
-          <div className="mt-8 space-y-4">
-            {condensedSteps.map((step, index) => (
-              <div key={step.title} className="glass-panel grid gap-4 p-6 md:grid-cols-[auto_1fr_auto] md:items-start md:p-8">
-                <div className="icon-wrap h-12 w-12 text-base font-semibold">{index + 1}</div>
-                <div>
-                  <h3 className="font-display text-xl font-semibold text-foreground">{step.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-muted-foreground">{step.description}</p>
-                </div>
-                <div className="hidden md:flex md:justify-end">
-                  <ArrowRight className="h-5 w-5 text-secondary" />
-                </div>
-              </div>
-            ))}
+          <div className="mt-8">
+            <ProcessCarousel steps={condensedSteps} />
           </div>
           <div className="mt-8 flex justify-start">
             <Button variant="brand" size="xl" asChild>
