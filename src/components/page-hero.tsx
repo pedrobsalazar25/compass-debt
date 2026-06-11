@@ -33,23 +33,25 @@ export function PageHero({
         fetchPriority={priority ? "high" : "auto"}
       />
       <div className="hero-overlay absolute inset-0" />
-      <div className="page-shell relative min-h-[32rem] py-16 md:py-24">
+      <div className="page-shell relative min-h-[28rem] py-20 md:py-28">
         <div
           className={cn(
-            "max-w-3xl space-y-6",
+            "max-w-3xl space-y-7",
             align === "center" && "mx-auto text-center",
           )}
         >
-          {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-          <div className="glass-panel space-y-5 p-8 md:p-10">
-            <h1 className="font-display text-4xl font-semibold tracking-normal text-balance text-foreground md:text-6xl">
-              {title}
-            </h1>
-            <p className="max-w-2xl text-base leading-7 text-muted-foreground md:text-lg">
-              {subtitle}
+          {eyebrow ? (
+            <p className="eyebrow bg-primary/20 text-white border-white/20 backdrop-blur-md">
+              {eyebrow}
             </p>
-            {children ? <div className="flex flex-wrap items-center gap-3">{children}</div> : null}
-          </div>
+          ) : null}
+          <h1 className="font-display text-4xl font-bold tracking-tight text-balance text-white md:text-6xl drop-shadow-sm">
+            {title}
+          </h1>
+          <p className="max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl drop-shadow-sm">
+            {subtitle}
+          </p>
+          {children ? <div className="flex flex-wrap items-center gap-4 pt-2">{children}</div> : null}
         </div>
       </div>
     </section>
