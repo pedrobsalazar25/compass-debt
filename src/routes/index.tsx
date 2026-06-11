@@ -54,7 +54,7 @@ function HomePage() {
               <Button variant="hero" size="xl" asChild>
                 <Link to="/contact">See How Much You Can Save</Link>
               </Button>
-              <Button variant="glass" size="xl" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <Button variant="glass" size="xl" asChild>
                 <a href={site.phoneHref}>
                   <Phone className="h-4 w-4" />
                   {site.phoneDisplay}
