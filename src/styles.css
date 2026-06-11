@@ -152,11 +152,12 @@
 }
 
 @utility glass-panel {
-  border: 1px solid color-mix(in oklab, white 35%, transparent);
-  background: linear-gradient(180deg, color-mix(in oklab, white 28%, transparent), color-mix(in oklab, var(--primary) 18%, transparent));
+  border: 1px solid color-mix(in oklab, white 45%, transparent);
+  background: linear-gradient(180deg, color-mix(in oklab, white 82%, transparent), color-mix(in oklab, white 62%, transparent));
   border-radius: calc(var(--radius) + 0.5rem);
   box-shadow: var(--shadow-medium);
   backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
 }
 
 @utility glass-nav {
