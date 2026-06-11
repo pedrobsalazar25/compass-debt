@@ -152,11 +152,11 @@
 }
 
 @utility glass-panel {
-  border: 1px solid color-mix(in oklab, var(--border) 90%, white 10%);
-  background: linear-gradient(180deg, color-mix(in oklab, white 76%, transparent), color-mix(in oklab, var(--card) 94%, transparent));
+  border: 1px solid color-mix(in oklab, white 35%, transparent);
+  background: linear-gradient(180deg, color-mix(in oklab, white 28%, transparent), color-mix(in oklab, var(--primary) 18%, transparent));
   border-radius: calc(var(--radius) + 0.5rem);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(22px);
+  box-shadow: var(--shadow-medium);
+  backdrop-filter: blur(28px) saturate(140%);
 }
 
 @utility glass-nav {
@@ -256,8 +256,8 @@
 
 @utility hero-overlay {
   background:
-    linear-gradient(90deg, color-mix(in oklab, var(--primary) 68%, transparent) 0%, color-mix(in oklab, var(--primary) 38%, transparent) 34%, transparent 75%),
-    linear-gradient(180deg, color-mix(in oklab, black 12%, transparent), color-mix(in oklab, black 22%, transparent));
+    linear-gradient(90deg, color-mix(in oklab, var(--primary) 78%, transparent) 0%, color-mix(in oklab, var(--primary) 52%, transparent) 40%, color-mix(in oklab, var(--primary) 18%, transparent) 80%),
+    linear-gradient(180deg, color-mix(in oklab, black 22%, transparent), color-mix(in oklab, black 32%, transparent));
 }
 
 @utility stat-pill {
