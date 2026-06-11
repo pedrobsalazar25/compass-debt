@@ -1,11 +1,4 @@
-import {
-  ArrowRight,
-  Briefcase,
-  HeartPulse,
-  MapPin,
-  Phone,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { FaqSection } from "@/components/faq-section";
