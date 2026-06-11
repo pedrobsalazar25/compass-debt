@@ -22,6 +22,7 @@ import heroAsset from "@/assets/hero.png.asset.json";
 import localTrustAsset from "@/assets/local-trust.png.asset.json";
 import logoAsset from "@/assets/compass-logo.png.asset.json";
 import medicalDebtAsset from "@/assets/medical-debt-relief.jpg.asset.json";
+import privateStudentLoansAsset from "@/assets/private-student-loans.png.asset.json";
 import unsecuredLoansAsset from "@/assets/unsecured-loans-collections.png.asset.json";
 import vehicleRepossessionAsset from "@/assets/vehicle-repossession-support.png.asset.json";
 
@@ -95,7 +96,7 @@ export const assets = {
   medicalDebt: medicalDebtAsset.url,
   businessDebt: businessDebtAsset.url,
   vehicleRepossession: vehicleRepossessionAsset.url,
-  privateStudentLoans: businessDebtAsset.url,
+  privateStudentLoans: privateStudentLoansAsset.url,
 } as const;
 
 export const desktopNavLinks: ReadonlyArray<{ label: string; path: SitePath }> = [
