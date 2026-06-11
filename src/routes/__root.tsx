@@ -83,6 +83,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Compass Debt Solutions" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Compass Debt Solutions | Debt Relief in Chandler, Arizona" },
+      { name: "twitter:title", content: "Compass Debt Solutions | Debt Relief in Chandler, Arizona" },
+      { name: "description", content: "Compass Debt Solutions helps Arizona residents settle credit card, medical, and personal loan debt for up to 50% less. Free consultation. Chandler, AZ." },
+      { property: "og:description", content: "Compass Debt Solutions helps Arizona residents settle credit card, medical, and personal loan debt for up to 50% less. Free consultation. Chandler, AZ." },
+      { name: "twitter:description", content: "Compass Debt Solutions helps Arizona residents settle credit card, medical, and personal loan debt for up to 50% less. Free consultation. Chandler, AZ." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/CB7rW9WWHhYCSIWkBTL8F09IjxS2/social-images/social-1781219453081-hero_.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/CB7rW9WWHhYCSIWkBTL8F09IjxS2/social-images/social-1781219453081-hero_.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
