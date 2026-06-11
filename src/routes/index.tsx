@@ -44,7 +44,7 @@ function HomePage() {
         <div className="page-shell relative py-16 md:py-24 lg:py-28">
           <div className="max-w-3xl space-y-6">
             <p className="eyebrow">Debt relief in Chandler, Arizona</p>
-            <div className="glass-panel space-y-6 p-8 md:p-10">
+            <div className="glass-panel space-y-6 p-8 md:p-10 bg-white/35">
               <h1 className="font-display text-4xl font-semibold tracking-normal text-balance text-primary-foreground md:text-6xl">
                 Guiding You Away from Debt, Toward a Financial Fresh Start.
               </h1>
