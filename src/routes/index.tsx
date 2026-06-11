@@ -41,41 +41,39 @@ function HomePage() {
           fetchPriority="high"
         />
         <div className="hero-overlay absolute inset-0" />
-        <div className="page-shell relative py-16 md:py-24 lg:py-28">
-          <div className="max-w-3xl space-y-6">
-            <p className="eyebrow">Debt relief in Chandler, Arizona</p>
-            <div className="glass-panel space-y-6 p-8 md:p-10">
-              <h1 className="font-display text-4xl font-semibold tracking-normal text-balance text-primary-foreground md:text-6xl">
-                Guiding You Away from Debt, Toward a Financial Fresh Start.
-              </h1>
-              <p className="max-w-2xl text-base leading-8 text-primary-foreground/88 md:text-lg">
-                {site.tagline}
-              </p>
-              <div className="flex flex-wrap items-center gap-3">
-                <Button variant="hero" size="xl" asChild>
-                  <Link to="/contact">See How Much You Can Save</Link>
-                </Button>
-                <Button variant="glass" size="xl" asChild>
-                  <a href={site.phoneHref}>
-                    <Phone className="h-4 w-4" />
-                    {site.phoneDisplay}
-                  </a>
-                </Button>
+        <div className="page-shell relative py-20 md:py-32 lg:py-36">
+          <div className="max-w-3xl space-y-8">
+            <p className="eyebrow bg-primary/20 text-white border-white/20 backdrop-blur-md">Debt relief in Chandler, Arizona</p>
+            <h1 className="font-display text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl drop-shadow-sm">
+              Guiding You Away from Debt, Toward a Financial Fresh Start.
+            </h1>
+            <p className="max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl drop-shadow-sm">
+              {site.tagline}
+            </p>
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/contact">See How Much You Can Save</Link>
+              </Button>
+              <Button variant="glass" size="xl" className="border-white/30 text-white hover:bg-white/10" asChild>
+                <a href={site.phoneHref}>
+                  <Phone className="h-4 w-4" />
+                  {site.phoneDisplay}
+                </a>
+              </Button>
+            </div>
+            <p className="text-sm font-medium text-white/80">{site.slogan}</p>
+            <div className="grid gap-3 pt-6 sm:grid-cols-3">
+              <div className="stat-pill bg-white/10 border-white/10 text-white backdrop-blur-md">
+                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/70">Based in</p>
+                <p className="mt-1.5 text-sm font-semibold text-white">Chandler, Arizona</p>
               </div>
-              <p className="text-sm text-primary-foreground/78">{site.slogan}</p>
-              <div className="grid gap-3 pt-3 md:grid-cols-3">
-                <div className="stat-pill">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-primary">Based in</p>
-                  <p className="mt-2 text-sm font-medium text-foreground">Chandler, Arizona</p>
-                </div>
-                <div className="stat-pill">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-primary">Focused on</p>
-                  <p className="mt-2 text-sm font-medium text-foreground">Credit cards & unsecured debt</p>
-                </div>
-                <div className="stat-pill">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-primary">Support</p>
-                  <p className="mt-2 text-sm font-medium text-foreground">One clear program payment</p>
-                </div>
+              <div className="stat-pill bg-white/10 border-white/10 text-white backdrop-blur-md">
+                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/70">Focused on</p>
+                <p className="mt-1.5 text-sm font-semibold text-white">Credit cards & unsecured debt</p>
+              </div>
+              <div className="stat-pill bg-white/10 border-white/10 text-white backdrop-blur-md">
+                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/70">Support</p>
+                <p className="mt-1.5 text-sm font-semibold text-white">One clear program payment</p>
               </div>
             </div>
           </div>
