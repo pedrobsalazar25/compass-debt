@@ -12,6 +12,10 @@ import {
   ShieldCheck,
   TrendingDown,
   WalletCards,
+  Percent,
+  Unlock,
+  Handshake,
+  Calendar,
 } from "lucide-react";
 
 import aboutUsAsset from "@/assets/about-us.png.asset.json";
@@ -292,18 +296,22 @@ export const aboutAdvantages = [
   {
     title: "Up to 50% Savings",
     description: "Negotiation strategies that significantly reduce your overall debt.",
+    icon: Percent,
   },
   {
     title: "Zero Prepayment Penalties",
     description: "Extra payments go directly toward shortening your timeline.",
+    icon: Unlock,
   },
   {
     title: "Aggressive Restructuring",
     description: "Direct creditor negotiation to settle for less than owed.",
+    icon: Handshake,
   },
   {
     title: "24-48 Month Timeline",
     description: "A clear, accelerated path to debt freedom.",
+    icon: Calendar,
   },
 ] as const;
 
