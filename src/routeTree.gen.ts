@@ -9,38 +9,227 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as ServicesVehicleRepossessionRouteImport } from './routes/services.vehicle-repossession'
+import { Route as ServicesUnsecuredLoansCollectionsRouteImport } from './routes/services.unsecured-loans-collections'
+import { Route as ServicesPrivateStudentLoansRouteImport } from './routes/services.private-student-loans'
+import { Route as ServicesMedicalDebtRouteImport } from './routes/services.medical-debt'
+import { Route as ServicesCreditCardDebtRouteImport } from './routes/services.credit-card-debt'
+import { Route as ServicesBusinessDebtRouteImport } from './routes/services.business-debt'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesVehicleRepossessionRoute =
+  ServicesVehicleRepossessionRouteImport.update({
+    id: '/vehicle-repossession',
+    path: '/vehicle-repossession',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesUnsecuredLoansCollectionsRoute =
+  ServicesUnsecuredLoansCollectionsRouteImport.update({
+    id: '/unsecured-loans-collections',
+    path: '/unsecured-loans-collections',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesPrivateStudentLoansRoute =
+  ServicesPrivateStudentLoansRouteImport.update({
+    id: '/private-student-loans',
+    path: '/private-student-loans',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesMedicalDebtRoute = ServicesMedicalDebtRouteImport.update({
+  id: '/medical-debt',
+  path: '/medical-debt',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesCreditCardDebtRoute = ServicesCreditCardDebtRouteImport.update({
+  id: '/credit-card-debt',
+  path: '/credit-card-debt',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesBusinessDebtRoute = ServicesBusinessDebtRouteImport.update({
+  id: '/business-debt',
+  path: '/business-debt',
+  getParentRoute: () => ServicesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/business-debt': typeof ServicesBusinessDebtRoute
+  '/services/credit-card-debt': typeof ServicesCreditCardDebtRoute
+  '/services/medical-debt': typeof ServicesMedicalDebtRoute
+  '/services/private-student-loans': typeof ServicesPrivateStudentLoansRoute
+  '/services/unsecured-loans-collections': typeof ServicesUnsecuredLoansCollectionsRoute
+  '/services/vehicle-repossession': typeof ServicesVehicleRepossessionRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/business-debt': typeof ServicesBusinessDebtRoute
+  '/services/credit-card-debt': typeof ServicesCreditCardDebtRoute
+  '/services/medical-debt': typeof ServicesMedicalDebtRoute
+  '/services/private-student-loans': typeof ServicesPrivateStudentLoansRoute
+  '/services/unsecured-loans-collections': typeof ServicesUnsecuredLoansCollectionsRoute
+  '/services/vehicle-repossession': typeof ServicesVehicleRepossessionRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/services/business-debt': typeof ServicesBusinessDebtRoute
+  '/services/credit-card-debt': typeof ServicesCreditCardDebtRoute
+  '/services/medical-debt': typeof ServicesMedicalDebtRoute
+  '/services/private-student-loans': typeof ServicesPrivateStudentLoansRoute
+  '/services/unsecured-loans-collections': typeof ServicesUnsecuredLoansCollectionsRoute
+  '/services/vehicle-repossession': typeof ServicesVehicleRepossessionRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/how-it-works'
+    | '/services'
+    | '/sitemap.xml'
+    | '/services/business-debt'
+    | '/services/credit-card-debt'
+    | '/services/medical-debt'
+    | '/services/private-student-loans'
+    | '/services/unsecured-loans-collections'
+    | '/services/vehicle-repossession'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/how-it-works'
+    | '/sitemap.xml'
+    | '/services/business-debt'
+    | '/services/credit-card-debt'
+    | '/services/medical-debt'
+    | '/services/private-student-loans'
+    | '/services/unsecured-loans-collections'
+    | '/services/vehicle-repossession'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/how-it-works'
+    | '/services'
+    | '/sitemap.xml'
+    | '/services/business-debt'
+    | '/services/credit-card-debt'
+    | '/services/medical-debt'
+    | '/services/private-student-loans'
+    | '/services/unsecured-loans-collections'
+    | '/services/vehicle-repossession'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +237,90 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/vehicle-repossession': {
+      id: '/services/vehicle-repossession'
+      path: '/vehicle-repossession'
+      fullPath: '/services/vehicle-repossession'
+      preLoaderRoute: typeof ServicesVehicleRepossessionRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/unsecured-loans-collections': {
+      id: '/services/unsecured-loans-collections'
+      path: '/unsecured-loans-collections'
+      fullPath: '/services/unsecured-loans-collections'
+      preLoaderRoute: typeof ServicesUnsecuredLoansCollectionsRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/private-student-loans': {
+      id: '/services/private-student-loans'
+      path: '/private-student-loans'
+      fullPath: '/services/private-student-loans'
+      preLoaderRoute: typeof ServicesPrivateStudentLoansRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/medical-debt': {
+      id: '/services/medical-debt'
+      path: '/medical-debt'
+      fullPath: '/services/medical-debt'
+      preLoaderRoute: typeof ServicesMedicalDebtRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/credit-card-debt': {
+      id: '/services/credit-card-debt'
+      path: '/credit-card-debt'
+      fullPath: '/services/credit-card-debt'
+      preLoaderRoute: typeof ServicesCreditCardDebtRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/business-debt': {
+      id: '/services/business-debt'
+      path: '/business-debt'
+      fullPath: '/services/business-debt'
+      preLoaderRoute: typeof ServicesBusinessDebtRouteImport
+      parentRoute: typeof ServicesRoute
+    }
   }
 }
 
+interface ServicesRouteChildren {
+  ServicesBusinessDebtRoute: typeof ServicesBusinessDebtRoute
+  ServicesCreditCardDebtRoute: typeof ServicesCreditCardDebtRoute
+  ServicesMedicalDebtRoute: typeof ServicesMedicalDebtRoute
+  ServicesPrivateStudentLoansRoute: typeof ServicesPrivateStudentLoansRoute
+  ServicesUnsecuredLoansCollectionsRoute: typeof ServicesUnsecuredLoansCollectionsRoute
+  ServicesVehicleRepossessionRoute: typeof ServicesVehicleRepossessionRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesBusinessDebtRoute: ServicesBusinessDebtRoute,
+  ServicesCreditCardDebtRoute: ServicesCreditCardDebtRoute,
+  ServicesMedicalDebtRoute: ServicesMedicalDebtRoute,
+  ServicesPrivateStudentLoansRoute: ServicesPrivateStudentLoansRoute,
+  ServicesUnsecuredLoansCollectionsRoute:
+    ServicesUnsecuredLoansCollectionsRoute,
+  ServicesVehicleRepossessionRoute: ServicesVehicleRepossessionRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  ServicesRoute: ServicesRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
