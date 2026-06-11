@@ -14,6 +14,7 @@ import {
   serviceItems,
   site,
   testimonials,
+  aboutAdvantages,
 } from "@/lib/site-content";
 
 export const Route = createFileRoute("/")({
@@ -76,6 +77,27 @@ function HomePage() {
                 <p className="mt-1.5 text-sm font-semibold text-white">One clear program payment</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-band border-b border-border/60">
+        <div className="page-shell">
+          <div className="section-heading max-w-2xl">
+            <p className="eyebrow">The Compass advantage</p>
+            <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
+              A calm, flexible approach built to help you move forward faster
+            </h2>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {aboutAdvantages.map((item) => (
+              <Card key={item.title} className="service-card border-border/60">
+                <CardContent className="space-y-3 p-6">
+                  <h3 className="font-display text-xl font-semibold text-foreground">{item.title}</h3>
+                  <p className="text-sm leading-7 text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
