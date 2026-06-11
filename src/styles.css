@@ -251,9 +251,11 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background-color: white;
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.05);
+  background-color: color-mix(in oklab, white 85%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid color-mix(in oklab, var(--color-border) 70%, transparent);
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.06);
 }
 
 @utility hero-overlay {
