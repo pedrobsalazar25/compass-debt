@@ -96,7 +96,7 @@ export const assets = {
   medicalDebt: medicalDebtAsset.url,
   businessDebt: businessDebtAsset.url,
   vehicleRepossession: vehicleRepossessionAsset.url,
-  privateStudentLoans: businessDebtAsset.url,
+  privateStudentLoans: privateStudentLoansAsset.url,
 } as const;
 
 export const desktopNavLinks: ReadonlyArray<{ label: string; path: SitePath }> = [
