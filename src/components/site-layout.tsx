@@ -115,8 +115,8 @@ function MobileHeader() {
             </Button>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="!border-2 !border-secondary !text-secondary !bg-transparent hover:!bg-secondary/10 hover:!text-secondary rounded-full" aria-label="Open menu">
-                  <Menu className="h-5 w-5 !text-secondary stroke-[2.5]" />
+                <Button variant="ghost" size="icon" className="border-2 rounded-full" style={{ borderColor: 'var(--color-secondary)', color: 'var(--color-secondary)', backgroundColor: 'transparent' }} aria-label="Open menu">
+                  <Menu className="h-5 w-5 stroke-[2.5]" style={{ color: 'var(--color-secondary)' }} />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="glass-drawer border-border/60">
