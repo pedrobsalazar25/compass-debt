@@ -74,7 +74,7 @@ function HomePage() {
               </Button>
             </div>
             <p className="text-sm font-medium text-white/80">{site.slogan}</p>
-            <div className="grid gap-3 pt-6 sm:grid-cols-3">
+            <div className="hidden sm:grid gap-3 pt-6 sm:grid-cols-3">
               <div className="stat-pill bg-white/10 border-white/10 text-white backdrop-blur-md">
                 <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/70">Based in</p>
                 <p className="mt-1.5 text-sm font-semibold text-white">Chandler, Arizona</p>
