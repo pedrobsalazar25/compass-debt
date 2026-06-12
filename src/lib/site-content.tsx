@@ -29,6 +29,7 @@ import medicalDebtAsset from "@/assets/medical-debt-relief.jpg.asset.json";
 import privateStudentLoansAsset from "@/assets/private-student-loans.png.asset.json";
 import unsecuredLoansAsset from "@/assets/unsecured-loans-collections.png.asset.json";
 import vehicleRepossessionAsset from "@/assets/vehicle-repossession-support.png.asset.json";
+import ctaBgAsset from "@/assets/cta-bg.png.asset.json";
 
 export type SitePath =
   | "/"
@@ -101,6 +102,7 @@ export const assets = {
   businessDebt: businessDebtAsset.url,
   vehicleRepossession: vehicleRepossessionAsset.url,
   privateStudentLoans: privateStudentLoansAsset.url,
+  ctaBg: ctaBgAsset.url,
 } as const;
 
 export const desktopNavLinks: ReadonlyArray<{ label: string; path: SitePath }> = [
