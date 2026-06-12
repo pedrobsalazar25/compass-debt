@@ -41,6 +41,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  const autoplay = useRef(Autoplay({ delay: 4500, stopOnInteraction: false, stopOnMouseEnter: true }));
   return (
     <>
       <section className="relative isolate overflow-hidden rounded-b-[2.5rem] md:rounded-b-[4rem] shadow-[0_30px_70px_-10px_rgba(8,23,54,0.35),0_15px_30px_-15px_rgba(8,23,54,0.2)]">
