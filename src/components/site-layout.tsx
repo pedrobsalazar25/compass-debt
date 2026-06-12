@@ -115,7 +115,7 @@ function MobileHeader() {
             </Button>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="glass" size="icon" aria-label="Open menu">
+                <Button variant="outline" size="icon" className="border-secondary text-secondary hover:bg-secondary/10 hover:text-secondary bg-white/60 backdrop-blur-md" aria-label="Open menu">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
