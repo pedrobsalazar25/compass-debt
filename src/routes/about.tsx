@@ -1,10 +1,11 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 import { PageHero } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { buildMeta } from "@/lib/seo";
-import { aboutAdvantages, assets } from "@/lib/site-content";
+import { aboutAdvantages, assets, site } from "@/lib/site-content";
 
 export const Route = createFileRoute("/about")({
   head: () =>
