@@ -70,8 +70,8 @@ function AboutPage() {
               </div>
             </aside>
 
-            {/* Contact cards - desktop only */}
-            <div className="hidden lg:grid grid-cols-1 gap-4">
+            {/* Contact cards - desktop/tablet only */}
+            <div className="hidden md:grid grid-cols-1 gap-4">
               <div className="rounded-[1.5rem] border border-border/60 bg-background/50 backdrop-blur-md p-5 flex items-start gap-4">
                 <div className="icon-wrap h-10 w-10 shrink-0">
                   <Phone className="h-5 w-5 text-primary" />
