@@ -71,7 +71,7 @@ function AboutPage() {
             </aside>
 
             {/* Contact cards - desktop/tablet only */}
-            <div className="flex flex-col gap-4 mt-6">
+            <div className="hidden md:flex flex-col gap-4 mt-6">
               <div className="rounded-[1.5rem] border border-border/60 bg-background/50 backdrop-blur-md p-5 flex items-start gap-4">
                 <div className="icon-wrap h-10 w-10 shrink-0">
                   <Phone className="h-5 w-5 text-primary" />
