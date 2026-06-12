@@ -358,6 +358,17 @@
     transform: scale(1.28);
   }
 }
+@utility shadow-hard {
+  box-shadow: 0 4px 0px #091322 !important;
+}
+
+@utility shadow-hard-hover {
+  box-shadow: 0 6px 0px #091322 !important;
+}
+
+@utility shadow-hard-active {
+  box-shadow: 0 2px 0px #091322 !important;
+}
 
 @media (max-width: 767px) {
   .section-band {
