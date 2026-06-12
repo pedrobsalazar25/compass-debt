@@ -222,9 +222,16 @@ function HomePage() {
 
       <FaqSection title="Frequently Asked Questions" items={homeFaqs} />
 
-      <section className="section-band section-band-tight">
-        <div className="page-shell">
-          <div className="glass-panel flex flex-col gap-6 p-8 md:flex-row md:items-center md:justify-between md:p-10">
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={assets.ctaBg}
+          alt="Arizona desert path at sunset"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent" />
+        <div className="page-shell relative py-20 md:py-28">
+          <div className="glass-panel flex flex-col gap-6 bg-white/90 p-8 backdrop-blur-xl md:flex-row md:items-center md:justify-between md:p-10">
             <div className="max-w-2xl space-y-3">
               <p className="eyebrow">Get started</p>
               <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
