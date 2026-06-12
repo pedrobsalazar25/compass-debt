@@ -127,7 +127,7 @@ function HowItWorksPage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/contact">Get Your Free Estimate</Link>
+                <Link to="/apply">Get Your Free Estimate</Link>
               </Button>
               <Button variant="outline" size="xl" asChild>
                 <a href={site.phoneHref}>
