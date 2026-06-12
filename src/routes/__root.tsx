@@ -144,6 +144,36 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    // Only load Tawk.to on desktop and tablet screens (width >= 768px)
+    if (typeof window !== "undefined" && window.innerWidth >= 768) {
+      (window as any).Tawk_API = (window as any).Tawk_API || {};
+      (window as any).Tawk_LoadStart = new Date();
+
+      const s1 = document.createElement("script");
+      const s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/6a2b6865d6a95f1c2c58b97c/1jqsovk1o";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      if (s0 && s0.parentNode) {
+        s0.parentNode.insertBefore(s1, s0);
+      } else {
+        document.head.appendChild(s1);
+      }
+
+      // Cleanup on unmount
+      return () => {
+        s1.remove();
+        const tawkElement = document.getElementById("tawkchat-iframe-container") || 
+                           document.querySelector("[id^='tawk']");
+        if (tawkElement) {
+          tawkElement.remove();
+        }
+      };
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <SiteLayout />
