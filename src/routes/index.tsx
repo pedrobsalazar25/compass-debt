@@ -231,7 +231,7 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent" />
         <div className="page-shell relative py-20 md:py-28">
-          <div className="glass-panel flex flex-col gap-6 bg-white/90 p-8 backdrop-blur-xl md:flex-row md:items-center md:justify-between md:p-10">
+          <div className="glass-panel flex flex-col gap-6 bg-white/25 border-white/30 p-8 backdrop-blur-xl md:flex-row md:items-center md:justify-between md:p-10">
             <div className="max-w-2xl space-y-3">
               <p className="eyebrow">Get started</p>
               <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
@@ -242,7 +242,7 @@ function HomePage() {
               <Button variant="hero" size="xl" asChild>
                 <Link to="/contact">Get My Free Savings Estimate</Link>
               </Button>
-              <Button variant="glass" size="xl" asChild>
+              <Button variant="outline" size="xl" asChild>
                 <a href={site.phoneHref}>
                   <Phone className="h-4 w-4" />
                   {site.phoneDisplay}
