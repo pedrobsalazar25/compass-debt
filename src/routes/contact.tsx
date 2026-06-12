@@ -57,9 +57,11 @@ function ContactPage() {
                 <p className="mt-2 text-sm leading-7 text-muted-foreground">{site.address}</p>
               </div>
               <div className="rounded-[1.5rem] border border-border/60 bg-background/70 p-5">
-                <Globe className="h-5 w-5 text-primary" />
-                <p className="mt-4 font-display text-xl font-semibold text-foreground">Website</p>
-                <p className="mt-2 text-sm leading-7 text-muted-foreground">{site.domain}</p>
+                <Mail className="h-5 w-5 text-primary" />
+                <p className="mt-4 font-display text-xl font-semibold text-foreground">Email</p>
+                <a href={`mailto:${site.email}`} className="mt-2 block text-sm font-medium text-primary hover:underline break-all">
+                  {site.email}
+                </a>
               </div>
             </div>
             <p className="text-sm leading-7 text-muted-foreground">
