@@ -374,6 +374,15 @@
   .section-band {
     padding-block: 3.5rem;
   }
+
+  #tawkchat-iframe-container,
+  [id^="tawkchat"],
+  .tawk-minified,
+  iframe[src*="tawk.to"],
+  .tawk-card {
+    display: none !important;
+  }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
