@@ -123,11 +123,29 @@ function MobileHeader() {
                 <div className="space-y-6 pt-8">
                   <img src={assets.logo} alt="Compass Debt Solutions logo" className="h-12 w-auto" loading="eager" />
                   <nav className="flex flex-col gap-2">
-                    {[...desktopNavLinks, { label: "Services", path: "/services" as SitePath }].map((link) => (
+                    {desktopNavLinks.map((link) => (
                       <Link key={link.path} to={link.path} className="drawer-link">
                         {link.label}
                       </Link>
                     ))}
+                    <Link to="/services" className="drawer-link">
+                      Services
+                    </Link>
+                    <div className="ml-3 flex flex-col gap-1 border-l border-border/60 pl-3">
+                      {serviceItems.map((service) => {
+                        const Icon = service.icon;
+                        return (
+                          <Link
+                            key={service.slug}
+                            to={service.path}
+                            className="drawer-link flex items-center gap-2 text-sm"
+                          >
+                            <Icon className="h-4 w-4 text-secondary" />
+                            <span>{service.name}</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
                   </nav>
                   <div className="glass-panel space-y-3 p-4">
                     <p className="font-display text-lg font-semibold text-foreground">Call for a free consultation</p>
