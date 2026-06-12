@@ -240,7 +240,7 @@ function HomePage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/contact">Get My Free Savings Estimate</Link>
+                <Link to="/apply">Get My Free Savings Estimate</Link>
               </Button>
               <Button variant="outline" size="xl" asChild>
                 <a href={site.phoneHref}>

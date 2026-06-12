@@ -80,7 +80,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/contact">Start Your Free Evaluation</Link>
+                <Link to="/apply">Start Your Free Evaluation</Link>
               </Button>
               <Button variant="outline" size="xl" asChild>
                 <a href={site.phoneHref}>
