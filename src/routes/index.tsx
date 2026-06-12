@@ -1,11 +1,20 @@
 import { MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Link, createFileRoute } from "@tanstack/react-router";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 import { FaqSection } from "@/components/faq-section";
 import { ProcessCarousel } from "@/components/process-carousel";
 import { ServiceShowcase } from "@/components/service-showcase";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { buildMeta } from "@/lib/seo";
 import {
   assets,
