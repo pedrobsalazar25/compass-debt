@@ -1,7 +1,7 @@
 import { MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { FaqSection } from "@/components/faq-section";
 import { ProcessCarousel } from "@/components/process-carousel";
@@ -128,31 +128,25 @@ function HomePage() {
               Four reasons clients choose a guided debt settlement path
             </h2>
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 hidden md:grid gap-6 md:grid-cols-2">
             {homeBenefits.map((benefit) => {
               const Icon = benefit.icon;
-              // Extract the first sentence
-              const firstSentence = benefit.description.match(/^[^.!?]+[.!?]/)?.[0] || benefit.description;
               return (
                 <Card key={benefit.title} className="service-card border-border/60">
-                  <CardContent className="flex gap-4 p-4 sm:gap-5 sm:p-6 md:p-8">
-                    <div className="icon-wrap h-10 w-10 sm:h-12 sm:w-12 shrink-0">
-                      <Icon className="h-4 sm:h-5 w-4 sm:w-5" />
+                  <CardContent className="flex gap-5 p-6 md:p-8">
+                    <div className="icon-wrap h-12 w-12 shrink-0">
+                      <Icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground">{benefit.title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-muted-foreground sm:hidden">
-                        {firstSentence}
-                      </p>
-                      <p className="mt-3 text-sm leading-7 text-muted-foreground hidden sm:block">
-                        {benefit.description}
-                      </p>
+                      <h3 className="font-display text-xl font-semibold text-foreground">{benefit.title}</h3>
+                      <p className="mt-3 text-sm leading-7 text-muted-foreground">{benefit.description}</p>
                     </div>
                   </CardContent>
                 </Card>
               );
             })}
           </div>
+          <BenefitsMobileReveal />
         </div>
       </section>
 
@@ -279,5 +273,73 @@ function HomePage() {
         </div>
       </section>
     </>
+  );
+}
+
+function BenefitsMobileReveal() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const items = Array.from(
+      container.querySelectorAll<HTMLElement>("[data-benefit-index]"),
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = Number(
+              (entry.target as HTMLElement).dataset.benefitIndex,
+            );
+            setActiveIndex(idx);
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
+    );
+    items.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="mt-6 grid gap-4 md:hidden">
+      {homeBenefits.map((benefit, idx) => {
+        const Icon = benefit.icon;
+        const isActive = activeIndex === idx;
+        return (
+          <Card
+            key={benefit.title}
+            data-benefit-index={idx}
+            className={`service-card border-border/60 transition-all duration-500 ${
+              isActive ? "shadow-lg scale-[1.01]" : ""
+            }`}
+          >
+            <CardContent className="flex gap-4 p-4">
+              <div className="icon-wrap h-10 w-10 shrink-0">
+                <Icon className="h-4 w-4" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-display text-base font-semibold text-foreground">
+                  {benefit.title}
+                </h3>
+                <div
+                  className={`grid transition-all duration-500 ease-out ${
+                    isActive
+                      ? "grid-rows-[1fr] opacity-100 mt-2"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <p className="overflow-hidden text-sm leading-6 text-muted-foreground">
+                    {benefit.description}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
   );
 }
