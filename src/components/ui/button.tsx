@@ -9,12 +9,12 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-[0_4px_0_#091322] hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-[0_6px_0_#091322] active:translate-y-0.5 active:shadow-[0_2px_0_#091322]",
-        brand: "bg-secondary text-secondary-foreground shadow-[0_4px_0_#091322] hover:bg-secondary-strong hover:-translate-y-0.5 hover:shadow-[0_6px_0_#091322] active:translate-y-0.5 active:shadow-[0_2px_0_#091322]",
-        hero: "bg-gradient-to-r from-secondary to-secondary-strong text-white font-semibold shadow-[0_4px_0_#091322] hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_6px_0_#091322] active:translate-y-0.5 active:shadow-[0_2px_0_#091322]",
+        default: "bg-primary text-primary-foreground border-2 border-[#091322] shadow-[0_6px_0_#091322] hover:bg-primary/95 hover:-translate-y-[2px] hover:shadow-[0_8px_0_#091322] active:translate-y-[2px] active:shadow-[0_2px_0_#091322]",
+        brand: "bg-secondary text-secondary-foreground border-2 border-[#091322] shadow-[0_6px_0_#091322] hover:bg-secondary-strong hover:-translate-y-[2px] hover:shadow-[0_8px_0_#091322] active:translate-y-[2px] active:shadow-[0_2px_0_#091322]",
+        hero: "bg-gradient-to-r from-secondary to-secondary-strong text-white font-semibold border-2 border-[#091322] shadow-[0_6px_0_#091322] hover:brightness-110 hover:-translate-y-[2px] hover:shadow-[0_8px_0_#091322] active:translate-y-[2px] active:shadow-[0_2px_0_#091322]",
         glass:
-          "border border-white/20 bg-white/10 text-white backdrop-blur-md shadow-[0_4px_0_#091322] hover:bg-white/20 hover:border-white/30 hover:-translate-y-0.5 hover:shadow-[0_6px_0_#091322] active:translate-y-0.5 active:shadow-[0_2px_0_#091322]",
-        destructive: "bg-destructive text-destructive-foreground shadow-[0_4px_0_#450a0a] hover:bg-destructive/90 hover:-translate-y-0.5 hover:shadow-[0_6px_0_#450a0a] active:translate-y-0.5 active:shadow-[0_2px_0_#450a0a]",
+          "border-2 border-white bg-white/10 text-white backdrop-blur-md shadow-[0_6px_0_rgba(9,19,34,0.45)] hover:bg-white/20 hover:-translate-y-[2px] hover:shadow-[0_8px_0_rgba(9,19,34,0.45)] active:translate-y-[2px] active:shadow-[0_2px_0_rgba(9,19,34,0.45)]",
+        destructive: "bg-destructive text-destructive-foreground border-2 border-[#450a0a] shadow-[0_6px_0_#450a0a] hover:bg-destructive/90 hover:-translate-y-[2px] hover:shadow-[0_8px_0_#450a0a] active:translate-y-[2px] active:shadow-[0_2px_0_#450a0a]",
         outline:
           "border border-input bg-background/80 text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground hover:-translate-y-0.5",
         secondary: "bg-secondary/15 text-foreground shadow-sm hover:bg-secondary/25",
