@@ -43,10 +43,10 @@ function AboutPage() {
               <p>
                 At Compass Debt Solutions, we know that overwhelming debt can feel like being lost without a map. Based in Chandler, Arizona, we serve as your trusted guide, helping individuals and businesses navigate their way out of financial stress and toward a clean slate.
               </p>
-              <p>
+              <p className="hidden md:block">
                 We specialize in aggressive, proven debt relief strategies for credit cards, personal loans, medical bills, collections, and business debt. Our mission is simple: to advocate for you. By negotiating directly with your creditors, we work to restructure your payments and settle your obligations for significantly less than what is owed — saving our clients up to 50% on their overall debt.
               </p>
-              <p>
+              <p className="hidden md:block">
                 We believe in transparent, client-first solutions. That means zero prepayment penalties and complete flexibility. When you choose to pay extra toward your monthly amount, we ensure those funds actively reduce your interest and shorten your timeline, helping you achieve total freedom in as little as 24 to 48 months.
               </p>
               <p>
