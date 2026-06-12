@@ -36,7 +36,7 @@ function AboutPage() {
       </PageHero>
 
       <section className="section-band">
-        <div className="page-shell grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="page-shell grid gap-6 lg:grid-cols-[1.15fr_0.85fr] items-start">
           <article className="glass-panel p-8 md:p-10">
             <p className="eyebrow">Company story</p>
             <div className="mt-4 space-y-5 text-base leading-8 text-muted-foreground">
