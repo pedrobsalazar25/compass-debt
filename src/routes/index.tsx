@@ -1,7 +1,9 @@
 import { MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import Autoplay from "embla-carousel-autoplay";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+
+import { ScrollRevealCards } from "@/components/scroll-reveal-cards";
 
 import { FaqSection } from "@/components/faq-section";
 import { ProcessCarousel } from "@/components/process-carousel";
