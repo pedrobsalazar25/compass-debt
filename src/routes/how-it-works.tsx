@@ -3,6 +3,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { FaqSection } from "@/components/faq-section";
 import { PageHero } from "@/components/page-hero";
+import { ScrollRevealCards } from "@/components/scroll-reveal-cards";
 import { Button } from "@/components/ui/button";
 import { buildMeta } from "@/lib/seo";
 import { assets, fullSteps, howItWorksFaqs, site, serviceItems } from "@/lib/site-content";
@@ -45,7 +46,7 @@ function HowItWorksPage() {
               A structured path from stress to resolution
             </h2>
           </div>
-          <div className="mt-8 space-y-4">
+          <div className="mt-8 hidden md:block space-y-4">
             {fullSteps.map((step, index) => (
               <div key={step.title} className="glass-panel grid gap-4 p-6 md:grid-cols-[auto_1fr] md:p-8">
                 <div className="icon-wrap h-12 w-12 text-base font-semibold">{index + 1}</div>
@@ -56,6 +57,7 @@ function HowItWorksPage() {
               </div>
             ))}
           </div>
+          <ScrollRevealCards items={fullSteps} numbered className="mt-8" />
         </div>
       </section>
 
