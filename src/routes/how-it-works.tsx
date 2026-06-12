@@ -5,7 +5,9 @@ import { FaqSection } from "@/components/faq-section";
 import { PageHero } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
 import { buildMeta } from "@/lib/seo";
-import { assets, fullSteps, howItWorksFaqs, site } from "@/lib/site-content";
+import { assets, fullSteps, howItWorksFaqs, site, serviceItems } from "@/lib/site-content";
+import { ServiceCard } from "@/components/service-showcase";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/how-it-works")({
   head: () =>
@@ -76,6 +78,31 @@ function HowItWorksPage() {
                   Flexibility matters when life changes. Your plan should be able to move with you.
                 </span>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-16 border-t border-border/40 pt-16">
+            <div className="section-heading max-w-2xl mb-8">
+              <p className="eyebrow">Our Services</p>
+              <h3 className="font-display text-2xl font-semibold tracking-normal text-foreground md:text-3xl">
+                What types of debt can we help you settle?
+              </h3>
+            </div>
+            <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+              {serviceItems.map((service) => (
+                <ServiceCard key={service.slug} service={service} />
+              ))}
+            </div>
+            <div className="md:hidden">
+              <Carousel opts={{ align: "start" }} className="w-full">
+                <CarouselContent>
+                  {serviceItems.map((service) => (
+                    <CarouselItem key={service.slug} className="basis-[88%]">
+                      <ServiceCard service={service} />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
           </div>
         </div>
