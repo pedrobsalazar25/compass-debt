@@ -200,17 +200,33 @@ function MobileBottomBar() {
   return (
     <div className="mobile-bottom-bar md:hidden">
       <div className="mobile-bottom-inner">
-        {mobileBottomLinks.map((item, index) => {
+        {mobileBottomLinks.slice(0, 2).map((item) => {
           const Icon = item.icon;
-          const needsGap = index >= 2;
           return (
             <Link
               key={item.path}
               to={item.path}
-              className={cn("mobile-nav-link", needsGap && "ml-12")}
+              className="mobile-nav-link"
             >
               <Icon className="h-5 w-5" />
-              <span>{item.label}</span>
+              <span className="truncate">{item.label}</span>
+            </Link>
+          );
+        })}
+        
+        {/* Placeholder spacer to leave room for absolute call button */}
+        <div className="w-full h-1" aria-hidden="true" />
+        
+        {mobileBottomLinks.slice(2).map((item) => {
+          const Icon = item.icon;
+          return (
+            <Link
+              key={item.path}
+              to={item.path}
+              className="mobile-nav-link"
+            >
+              <Icon className="h-5 w-5" />
+              <span className="truncate">{item.label}</span>
             </Link>
           );
         })}
