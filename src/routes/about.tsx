@@ -1,10 +1,11 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 import { PageHero } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { buildMeta } from "@/lib/seo";
-import { aboutAdvantages, assets } from "@/lib/site-content";
+import { aboutAdvantages, assets, site } from "@/lib/site-content";
 
 export const Route = createFileRoute("/about")({
   head: () =>
@@ -35,7 +36,7 @@ function AboutPage() {
       </PageHero>
 
       <section className="section-band">
-        <div className="page-shell grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="page-shell grid gap-6 lg:grid-cols-[1.15fr_0.85fr] items-start">
           <article className="glass-panel p-8 md:p-10">
             <p className="eyebrow">Company story</p>
             <div className="mt-4 space-y-5 text-base leading-8 text-muted-foreground">
@@ -53,20 +54,59 @@ function AboutPage() {
               </p>
             </div>
           </article>
-          <aside className="glass-panel p-8 md:p-10">
-            <p className="eyebrow">Team philosophy</p>
-            <h2 className="mt-4 font-display text-3xl font-semibold tracking-normal text-foreground">
-              We believe in transparent, client-first solutions.
-            </h2>
-            <p className="mt-4 text-base leading-8 text-muted-foreground">
-              Every plan starts with listening, not pushing. We explain the process clearly, tailor the strategy to your budget, and stay focused on practical progress.
-            </p>
-            <div className="mt-6">
-              <Button variant="brand" size="xl" asChild>
-                <Link to="/contact">Start Your Free Evaluation</Link>
-              </Button>
+          <div className="flex flex-col gap-6">
+            <aside className="glass-panel p-8 md:p-10">
+              <p className="eyebrow">Team philosophy</p>
+              <h2 className="mt-4 font-display text-3xl font-semibold tracking-normal text-foreground">
+                We believe in transparent, client-first solutions.
+              </h2>
+              <p className="mt-4 text-base leading-8 text-muted-foreground">
+                Every plan starts with listening, not pushing. We explain the process clearly, tailor the strategy to your budget, and stay focused on practical progress.
+              </p>
+              <div className="mt-6">
+                <Button variant="brand" size="xl" asChild>
+                  <Link to="/contact">Start Your Free Evaluation</Link>
+                </Button>
+              </div>
+            </aside>
+
+            {/* Contact cards - desktop/tablet only */}
+            <div className="hidden md:flex flex-col gap-4 mt-6">
+              <div className="rounded-[1.5rem] border border-border/60 bg-background/50 backdrop-blur-md p-5 flex items-start gap-4">
+                <div className="icon-wrap h-10 w-10 shrink-0">
+                  <Phone className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-display text-lg font-semibold text-foreground">Phone</p>
+                  <a href={site.phoneHref} className="mt-1 block text-primary hover:underline font-medium">
+                    {site.phoneDisplay}
+                  </a>
+                </div>
+              </div>
+
+              <div className="rounded-[1.5rem] border border-border/60 bg-background/50 backdrop-blur-md p-5 flex items-start gap-4">
+                <div className="icon-wrap h-10 w-10 shrink-0">
+                  <MapPin className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-display text-lg font-semibold text-foreground">Address</p>
+                  <p className="mt-1 text-sm leading-6 text-muted-foreground">{site.address}</p>
+                </div>
+              </div>
+
+              <div className="rounded-[1.5rem] border border-border/60 bg-background/50 backdrop-blur-md p-5 flex items-start gap-4">
+                <div className="icon-wrap h-10 w-10 shrink-0">
+                  <Mail className="h-5 w-5 text-primary" />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-display text-lg font-semibold text-foreground">Email</p>
+                  <a href={`mailto:${site.email}`} className="mt-1 block text-sm font-medium text-primary hover:underline truncate">
+                    {site.email}
+                  </a>
+                </div>
+              </div>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 
