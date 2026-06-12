@@ -54,7 +54,7 @@ function HomePage() {
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/contact">See How Much You Can Save</Link>
+                <Link to="/apply">See How Much You Can Save</Link>
               </Button>
               <Button variant="glass" size="xl" asChild>
                 <a href={site.phoneHref}>
@@ -159,7 +159,7 @@ function HomePage() {
           </div>
           <div className="mt-8 flex justify-start">
             <Button variant="brand" size="xl" asChild>
-              <Link to="/contact">Start Your Free Evaluation</Link>
+              <Link to="/apply">Start Your Free Evaluation</Link>
             </Button>
           </div>
         </div>

@@ -31,7 +31,7 @@ function AboutPage() {
         priority
       >
         <Button variant="hero" size="xl" asChild>
-          <Link to="/contact">Start Your Free Evaluation</Link>
+          <Link to="/apply">Start Your Free Evaluation</Link>
         </Button>
       </PageHero>
 
@@ -64,9 +64,9 @@ function AboutPage() {
                 Every plan starts with listening, not pushing. We explain the process clearly, tailor the strategy to your budget, and stay focused on practical progress.
               </p>
               <div className="mt-6">
-                <Button variant="brand" size="xl" asChild>
-                  <Link to="/contact">Start Your Free Evaluation</Link>
-                </Button>
+              <Button variant="brand" size="xl" asChild>
+                <Link to="/apply">Start Your Free Evaluation</Link>
+              </Button>
               </div>
             </aside>
 

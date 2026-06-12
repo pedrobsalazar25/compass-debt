@@ -33,7 +33,7 @@ function HowItWorksPage() {
         priority
       >
         <Button variant="hero" size="xl" asChild>
-          <Link to="/contact">Get Your Free Estimate</Link>
+          <Link to="/apply">Get Your Free Estimate</Link>
         </Button>
       </PageHero>
 

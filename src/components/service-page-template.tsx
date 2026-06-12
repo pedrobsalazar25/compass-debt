@@ -24,7 +24,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         eyebrow="Debt relief services"
       >
         <Button variant="hero" size="xl" asChild>
-          <a href={site.phoneHref}>{service.ctaLabel}</a>
+          <Link to="/apply">{service.ctaLabel}</Link>
         </Button>
         <Button variant="glass" size="xl" asChild>
           <a href={site.phoneHref}>
