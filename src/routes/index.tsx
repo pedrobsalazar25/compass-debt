@@ -217,16 +217,26 @@ function HomePage() {
               Real relief starts with feeling understood
             </h2>
           </div>
-          <div className="mt-8 grid gap-6 lg:grid-cols-3">
-            {testimonials.map((item) => (
-              <Card key={item.name} className="service-card border-border/60">
-                <CardContent className="flex h-full flex-col justify-between gap-6 p-6 md:p-8">
-                  <p className="text-sm leading-8 text-muted-foreground">“{item.quote}”</p>
-                  <p className="font-display text-lg font-semibold text-foreground">{item.name}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Carousel
+            className="mt-8"
+            opts={{ loop: true, align: "start" }}
+            plugins={[autoplay.current]}
+          >
+            <CarouselContent>
+              {testimonials.map((item) => (
+                <CarouselItem key={item.name} className="md:basis-1/2 lg:basis-1/3">
+                  <Card className="service-card border-border/60 h-full">
+                    <CardContent className="flex h-full flex-col justify-between gap-6 p-6 md:p-8">
+                      <p className="text-sm leading-8 text-muted-foreground">“{item.quote}”</p>
+                      <p className="font-display text-lg font-semibold text-foreground">{item.name}</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </section>
 
