@@ -99,7 +99,7 @@ function HomePage() {
               A calm, flexible approach built to help you move forward faster
             </h2>
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 hidden md:grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {aboutAdvantages.map((item) => {
               const Icon = item.icon;
               return (
@@ -117,6 +117,7 @@ function HomePage() {
               );
             })}
           </div>
+          <ScrollRevealCards items={aboutAdvantages} />
         </div>
       </section>
 
@@ -146,7 +147,7 @@ function HomePage() {
               );
             })}
           </div>
-          <BenefitsMobileReveal />
+          <ScrollRevealCards items={homeBenefits} />
         </div>
       </section>
 
@@ -276,22 +277,28 @@ function HomePage() {
   );
 }
 
-function BenefitsMobileReveal() {
+type RevealItem = {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+};
+
+function ScrollRevealCards({ items }: { items: ReadonlyArray<RevealItem> }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-    const items = Array.from(
-      container.querySelectorAll<HTMLElement>("[data-benefit-index]"),
+    const els = Array.from(
+      container.querySelectorAll<HTMLElement>("[data-reveal-index]"),
     );
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const idx = Number(
-              (entry.target as HTMLElement).dataset.benefitIndex,
+              (entry.target as HTMLElement).dataset.revealIndex,
             );
             setActiveIndex(idx);
           }
@@ -299,19 +306,19 @@ function BenefitsMobileReveal() {
       },
       { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
     );
-    items.forEach((el) => observer.observe(el));
+    els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
   return (
     <div ref={containerRef} className="mt-6 grid gap-4 md:hidden">
-      {homeBenefits.map((benefit, idx) => {
-        const Icon = benefit.icon;
+      {items.map((item, idx) => {
+        const Icon = item.icon;
         const isActive = activeIndex === idx;
         return (
           <Card
-            key={benefit.title}
-            data-benefit-index={idx}
+            key={item.title}
+            data-reveal-index={idx}
             className={`service-card border-border/60 transition-all duration-500 ${
               isActive ? "shadow-lg scale-[1.01]" : ""
             }`}
@@ -322,7 +329,7 @@ function BenefitsMobileReveal() {
               </div>
               <div className="flex-1">
                 <h3 className="font-display text-base font-semibold text-foreground">
-                  {benefit.title}
+                  {item.title}
                 </h3>
                 <div
                   className={`grid transition-all duration-500 ease-out ${
@@ -332,7 +339,7 @@ function BenefitsMobileReveal() {
                   }`}
                 >
                   <p className="overflow-hidden text-sm leading-6 text-muted-foreground">
-                    {benefit.description}
+                    {item.description}
                   </p>
                 </div>
               </div>
