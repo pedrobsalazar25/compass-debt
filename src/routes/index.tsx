@@ -57,7 +57,7 @@ function HomePage() {
           <div className="max-w-3xl space-y-8">
             <p className="eyebrow bg-primary/20 text-white border-white/20 backdrop-blur-md">Debt relief in Chandler, Arizona</p>
             <h1 className="font-display text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl drop-shadow-sm">
-              Guiding You Away from Debt, Toward a Financial Fresh Start.
+              Your compass towards financial freedom.
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl drop-shadow-sm">
               {site.tagline}
@@ -73,7 +73,6 @@ function HomePage() {
                 </a>
               </Button>
             </div>
-            <p className="text-sm font-medium text-white/80">{site.slogan}</p>
             <div className="hidden sm:grid gap-3 pt-6 sm:grid-cols-3">
               <div className="stat-pill bg-white/10 border-white/10 text-white backdrop-blur-md">
                 <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/70">Based in</p>
