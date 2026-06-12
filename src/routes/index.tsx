@@ -275,3 +275,71 @@ function HomePage() {
     </>
   );
 }
+
+function BenefitsMobileReveal() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const items = Array.from(
+      container.querySelectorAll<HTMLElement>("[data-benefit-index]"),
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = Number(
+              (entry.target as HTMLElement).dataset.benefitIndex,
+            );
+            setActiveIndex(idx);
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
+    );
+    items.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="mt-6 grid gap-4 md:hidden">
+      {homeBenefits.map((benefit, idx) => {
+        const Icon = benefit.icon;
+        const isActive = activeIndex === idx;
+        return (
+          <Card
+            key={benefit.title}
+            data-benefit-index={idx}
+            className={`service-card border-border/60 transition-all duration-500 ${
+              isActive ? "shadow-lg scale-[1.01]" : ""
+            }`}
+          >
+            <CardContent className="flex gap-4 p-4">
+              <div className="icon-wrap h-10 w-10 shrink-0">
+                <Icon className="h-4 w-4" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-display text-base font-semibold text-foreground">
+                  {benefit.title}
+                </h3>
+                <div
+                  className={`grid transition-all duration-500 ease-out ${
+                    isActive
+                      ? "grid-rows-[1fr] opacity-100 mt-2"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <p className="overflow-hidden text-sm leading-6 text-muted-foreground">
+                    {benefit.description}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  );
+}
