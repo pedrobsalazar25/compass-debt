@@ -5,7 +5,7 @@ import { FaqSection } from "@/components/faq-section";
 import { PageHero } from "@/components/page-hero";
 import { ServiceShowcase } from "@/components/service-showcase";
 import { Button } from "@/components/ui/button";
-import { serviceItems, site, type ServiceItem } from "@/lib/site-content";
+import { assets, serviceItems, site, type ServiceItem } from "@/lib/site-content";
 
 interface ServicePageTemplateProps {
   service: ServiceItem;
