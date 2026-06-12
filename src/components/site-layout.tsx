@@ -27,7 +27,7 @@ const mobileBottomLinks: ReadonlyArray<{
 }> = [
   { label: "Home", path: "/", icon: Home },
   { label: "Services", path: "/services", icon: Briefcase },
-  { label: "How It Works", path: "/how-it-works", icon: Compass },
+  { label: "Apply Now", path: "/apply", icon: Compass },
   { label: "Contact", path: "/contact", icon: Phone },
 ] as const;
 

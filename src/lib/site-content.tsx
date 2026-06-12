@@ -37,6 +37,7 @@ export type SitePath =
   | "/services"
   | "/about"
   | "/contact"
+  | "/apply"
   | "/services/credit-card-debt"
   | "/services/unsecured-loans-collections"
   | "/services/medical-debt"
