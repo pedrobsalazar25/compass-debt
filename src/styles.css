@@ -77,9 +77,9 @@
   --shadow-soft: 0 12px 32px -18px color-mix(in oklab, var(--primary) 28%, transparent);
   --shadow-medium: 0 24px 60px -24px color-mix(in oklab, var(--primary) 32%, transparent);
   --shadow-strong: 0 32px 80px -30px color-mix(in oklab, var(--secondary) 36%, transparent);
-  --shadow-hard: 0 4px 0px color-mix(in oklab, var(--primary) 70%, black);
-  --shadow-hard-hover: 0 6px 0px color-mix(in oklab, var(--primary) 70%, black);
-  --shadow-hard-active: 0 2px 0px color-mix(in oklab, var(--primary) 70%, black);
+  --shadow-hard: 0 4px 0px #091322;
+  --shadow-hard-hover: 0 6px 0px #091322;
+  --shadow-hard-active: 0 2px 0px #091322;
 }
 
 @layer base {
