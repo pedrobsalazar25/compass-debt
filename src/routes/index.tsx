@@ -1,11 +1,20 @@
 import { MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Link, createFileRoute } from "@tanstack/react-router";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 import { FaqSection } from "@/components/faq-section";
 import { ProcessCarousel } from "@/components/process-carousel";
 import { ServiceShowcase } from "@/components/service-showcase";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { buildMeta } from "@/lib/seo";
 import {
   assets,
@@ -32,6 +41,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  const autoplay = useRef(Autoplay({ delay: 4500, stopOnInteraction: false, stopOnMouseEnter: true }));
   return (
     <>
       <section className="relative isolate overflow-hidden rounded-b-[2.5rem] md:rounded-b-[4rem] shadow-[0_30px_70px_-10px_rgba(8,23,54,0.35),0_15px_30px_-15px_rgba(8,23,54,0.2)]">
@@ -207,16 +217,26 @@ function HomePage() {
               Real relief starts with feeling understood
             </h2>
           </div>
-          <div className="mt-8 grid gap-6 lg:grid-cols-3">
-            {testimonials.map((item) => (
-              <Card key={item.name} className="service-card border-border/60">
-                <CardContent className="flex h-full flex-col justify-between gap-6 p-6 md:p-8">
-                  <p className="text-sm leading-8 text-muted-foreground">“{item.quote}”</p>
-                  <p className="font-display text-lg font-semibold text-foreground">{item.name}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Carousel
+            className="mt-8"
+            opts={{ loop: true, align: "start" }}
+            plugins={[autoplay.current]}
+          >
+            <CarouselContent>
+              {testimonials.map((item) => (
+                <CarouselItem key={item.name} className="md:basis-1/2 lg:basis-1/3">
+                  <Card className="service-card border-border/60 h-full">
+                    <CardContent className="flex h-full flex-col justify-between gap-6 p-6 md:p-8">
+                      <p className="text-sm leading-8 text-muted-foreground">“{item.quote}”</p>
+                      <p className="font-display text-lg font-semibold text-foreground">{item.name}</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </section>
 
