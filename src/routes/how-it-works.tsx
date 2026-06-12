@@ -57,12 +57,12 @@ function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="section-band">
+      <section className="bg-white py-16 md:py-24">
         <div className="page-shell">
-          <div className="glass-panel grid gap-6 p-8 md:grid-cols-[0.9fr_1.1fr] md:p-10">
+          <div className="grid gap-6 md:grid-cols-[0.9fr_1.1fr]">
             <div className="space-y-3">
               <p className="eyebrow">The flexibility rule</p>
-              <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground">
+              <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
                 Zero prepayment penalties.
               </h2>
             </div>
@@ -80,6 +80,7 @@ function HowItWorksPage() {
           </div>
         </div>
       </section>
+
 
       <section className="section-band section-band-tight">
         <div className="page-shell">
