@@ -147,7 +147,7 @@ function HomePage() {
               );
             })}
           </div>
-          <BenefitsMobileReveal />
+          <ScrollRevealCards items={homeBenefits} />
         </div>
       </section>
 
