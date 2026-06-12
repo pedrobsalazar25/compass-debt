@@ -82,7 +82,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
               <Button variant="hero" size="xl" asChild>
                 <Link to="/contact">Start Your Free Evaluation</Link>
               </Button>
-              <Button variant="glass" size="xl" asChild>
+              <Button variant="outline" size="xl" asChild>
                 <a href={site.phoneHref}>
                   <Phone className="h-4 w-4" />
                   {site.phoneDisplay}
