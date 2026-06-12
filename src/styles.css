@@ -379,9 +379,12 @@
   [id^="tawkchat"],
   .tawk-minified,
   iframe[src*="tawk.to"],
-  .tawk-card {
+  .tawk-card,
+  [class*="tawk"],
+  [id*="tawk"],
+  [class*="twk"],
+  [id*="twk"] {
     display: none !important;
-  }
   }
 }
 
