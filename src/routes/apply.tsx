@@ -21,12 +21,19 @@ function ApplyPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
+    if (container.dataset.loaded === "true") return;
+    container.dataset.loaded = "true";
     const script = document.createElement("script");
     script.src = "https://form.jotform.com/jsform/261586645948677";
     script.type = "text/javascript";
     script.async = true;
-    containerRef.current.appendChild(script);
+    container.appendChild(script);
+    return () => {
+      container.innerHTML = "";
+      delete container.dataset.loaded;
+    };
   }, []);
 
   return (
