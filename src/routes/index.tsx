@@ -99,7 +99,7 @@ function HomePage() {
               A calm, flexible approach built to help you move forward faster
             </h2>
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 hidden md:grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {aboutAdvantages.map((item) => {
               const Icon = item.icon;
               return (
@@ -117,6 +117,7 @@ function HomePage() {
               );
             })}
           </div>
+          <ScrollRevealCards items={aboutAdvantages} />
         </div>
       </section>
 
