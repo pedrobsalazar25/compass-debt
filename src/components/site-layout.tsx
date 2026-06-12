@@ -174,7 +174,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border/60 bg-card/70">
+    <footer className="hidden md:block border-t border-border/60 bg-card/70">
       <div className="page-shell grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr_1fr]">
         <div className="space-y-4">
           <img src={assets.logo} alt="Compass Debt Solutions logo" className="h-12 w-auto" loading="lazy" />
