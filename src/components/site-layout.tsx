@@ -115,8 +115,8 @@ function MobileHeader() {
             </Button>
             <Sheet>
               <SheetTrigger asChild>
-                <button className="h-10 w-10 border-2 border-[#5680a6] text-[#5680a6] bg-[#5680a6]/10 flex items-center justify-center rounded-full transition-all cursor-pointer" aria-label="Open menu">
-                  <Menu className="h-5 w-5 text-[#5680a6] stroke-[2.5]" />
+                <button className="h-10 w-10 border-2 border-black text-white bg-black flex items-center justify-center rounded-full transition-all cursor-pointer" aria-label="Open menu">
+                  <Menu className="h-5 w-5 text-white stroke-[2.5]" />
                 </button>
               </SheetTrigger>
               <SheetContent side="right" className="glass-drawer border-border/60">
