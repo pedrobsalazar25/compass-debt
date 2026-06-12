@@ -3,6 +3,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { FaqSection } from "@/components/faq-section";
 import { PageHero } from "@/components/page-hero";
+import { ScrollRevealCards } from "@/components/scroll-reveal-cards";
 import { Button } from "@/components/ui/button";
 import { buildMeta } from "@/lib/seo";
 import { assets, fullSteps, howItWorksFaqs, site, serviceItems } from "@/lib/site-content";
