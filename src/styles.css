@@ -41,6 +41,9 @@
   --shadow-soft: var(--shadow-soft);
   --shadow-medium: var(--shadow-medium);
   --shadow-strong: var(--shadow-strong);
+  --shadow-hard: var(--shadow-hard);
+  --shadow-hard-hover: var(--shadow-hard-hover);
+  --shadow-hard-active: var(--shadow-hard-active);
 }
 
 :root {
