@@ -20,17 +20,19 @@ function ServiceCard({ service }: { service: ServiceItem }) {
 
   return (
     <Card className="service-card h-full border-border/60">
-      <CardContent className="flex h-full flex-col gap-5 p-6">
-        <div className="icon-wrap">
-          <Icon className="h-5 w-5" />
+      <CardContent className="flex h-full flex-col justify-between gap-5 p-6">
+        <div className="flex items-start gap-4">
+          <div className="icon-wrap h-16 w-16 shrink-0 flex items-center justify-center">
+            <Icon className="h-8 w-8" />
+          </div>
+          <div className="space-y-2">
+            <h3 className="font-display text-xl font-semibold tracking-normal text-foreground leading-snug">
+              {service.name}
+            </h3>
+            <p className="text-sm leading-6 text-muted-foreground">{service.shortDescription}</p>
+          </div>
         </div>
-        <div className="space-y-3">
-          <h3 className="font-display text-xl font-semibold tracking-normal text-foreground">
-            {service.name}
-          </h3>
-          <p className="text-sm leading-7 text-muted-foreground">{service.shortDescription}</p>
-        </div>
-        <Link to={service.path} className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-transform duration-200 hover:translate-x-1">
+        <Link to={service.path} className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-transform duration-200 hover:translate-x-1 mt-2">
           Learn More
           <ArrowRight className="h-4 w-4" />
         </Link>
