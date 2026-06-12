@@ -114,10 +114,8 @@ function MobileHeader() {
               <a href={site.phoneHref}>{site.phoneDisplay}</a>
             </Button>
             <Sheet>
-              <SheetTrigger asChild>
-                <button className="h-10 w-10 border-2 border-secondary text-secondary bg-transparent hover:bg-secondary/10 flex items-center justify-center rounded-full transition-colors cursor-pointer" aria-label="Open menu">
-                  <Menu className="h-5 w-5 text-secondary stroke-[2.5]" />
-                </button>
+              <SheetTrigger className="h-10 w-10 border-2 border-secondary text-secondary bg-transparent hover:bg-secondary/10 flex items-center justify-center rounded-full transition-colors cursor-pointer">
+                <Menu className="h-5 w-5 text-secondary stroke-[2.5]" />
               </SheetTrigger>
               <SheetContent side="right" className="glass-drawer border-border/60">
                 <div className="space-y-6 pt-8">
