@@ -41,6 +41,9 @@
   --shadow-soft: var(--shadow-soft);
   --shadow-medium: var(--shadow-medium);
   --shadow-strong: var(--shadow-strong);
+  --shadow-hard: var(--shadow-hard);
+  --shadow-hard-hover: var(--shadow-hard-hover);
+  --shadow-hard-active: var(--shadow-hard-active);
 }
 
 :root {
@@ -74,6 +77,9 @@
   --shadow-soft: 0 12px 32px -18px color-mix(in oklab, var(--primary) 28%, transparent);
   --shadow-medium: 0 24px 60px -24px color-mix(in oklab, var(--primary) 32%, transparent);
   --shadow-strong: 0 32px 80px -30px color-mix(in oklab, var(--secondary) 36%, transparent);
+  --shadow-hard: 0 4px 0px #091322;
+  --shadow-hard-hover: 0 6px 0px #091322;
+  --shadow-hard-active: 0 2px 0px #091322;
 }
 
 @layer base {
@@ -351,6 +357,17 @@
     opacity: 0;
     transform: scale(1.28);
   }
+}
+@utility shadow-hard {
+  box-shadow: 0 4px 0px #091322 !important;
+}
+
+@utility shadow-hard-hover {
+  box-shadow: 0 6px 0px #091322 !important;
+}
+
+@utility shadow-hard-active {
+  box-shadow: 0 2px 0px #091322 !important;
 }
 
 @media (max-width: 767px) {
