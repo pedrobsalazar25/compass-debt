@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <>
-      <section className="relative isolate overflow-hidden border-b border-border/60">
+      <section className="relative isolate overflow-hidden rounded-b-[2.5rem] md:rounded-b-[4rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]">
         <img
           src={assets.hero}
           alt="Compass Debt Solutions team meeting with clients"
