@@ -92,7 +92,7 @@ function DesktopHeader() {
             </NavigationMenu>
 
             <Button variant="brand" size="smWide" asChild>
-              <Link to="/contact">Get My Free Savings Estimate</Link>
+              <Link to="/apply">Get My Free Savings Estimate</Link>
             </Button>
           </div>
         </div>
