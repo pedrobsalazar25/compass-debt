@@ -1,4 +1,4 @@
-import { Globe, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero } from "@/components/page-hero";
