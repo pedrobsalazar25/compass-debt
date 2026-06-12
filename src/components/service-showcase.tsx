@@ -15,7 +15,7 @@ interface ServiceShowcaseProps {
   services: readonly ServiceItem[];
 }
 
-function ServiceCard({ service }: { service: ServiceItem }) {
+export function ServiceCard({ service }: { service: ServiceItem }) {
   const Icon = service.icon;
 
   return (
