@@ -154,7 +154,7 @@ function HomePage() {
       </section>
 
       <ServiceShowcase
-        title="What We Relieve"
+        title="What are you looking for help with?"
         subtitle="From high-interest credit cards to business debt and private student loans, we create plans around the debts that are holding you back."
         services={serviceItems}
       />
