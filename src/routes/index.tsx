@@ -59,7 +59,7 @@ function HomePage() {
           <div className="max-w-3xl space-y-8">
             <p className="eyebrow bg-primary/20 text-white border-white/20 backdrop-blur-md">Debt relief in Chandler, Arizona</p>
             <h1 className="font-display text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl drop-shadow-sm">
-              Your compass towards financial freedom.
+              Navigating you to financial freedom&nbsp;
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl drop-shadow-sm">
               {site.tagline}
