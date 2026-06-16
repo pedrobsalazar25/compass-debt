@@ -446,7 +446,7 @@ export const serviceItems: ReadonlyArray<ServiceItem> = [
       {
         question: "Can you help if my business is still operating?",
         answer:
-          "Yes. We work with both active businesses and those that have closed. Operating businesses often have better settlement options.",
+          "No, we only work with business that are dissolved and no longer active.",
       },
       {
         question: "How is business debt settlement different from personal?",
