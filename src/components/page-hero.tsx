@@ -33,7 +33,7 @@ export function PageHero({
         fetchPriority={priority ? "high" : "auto"}
       />
       <div className="hero-overlay absolute inset-0" />
-      <div className="page-shell relative min-h-[28rem] py-20 md:py-28">
+      <div className="page-shell relative min-h-[128rem] py-20 md:py-28">
         <div className={cn("max-w-3xl space-y-7", align === "center" && "mx-auto text-center")}>
           {eyebrow ? (
             <p className="eyebrow bg-primary/20 text-white border-white/20 backdrop-blur-md">{eyebrow}</p>
