@@ -400,7 +400,7 @@ export const serviceItems: ReadonlyArray<ServiceItem> = [
     problem:
       "A single medical emergency can lead to thousands of dollars in bills. Even with insurance, hospital costs can quickly become overwhelming. You shouldn't have to choose between your health and your financial future.",
     solution:
-      "Medical debt is one of the most negotiable types of debt. We leverage special protections and dispute options to reduce your hospital bills and stop collection efforts. You focus on healing — we handle the paperwork.",
+      "Medical debt is one of the most common types of debt. We leverage outstanding long term relationships to reduce your hospital bills and stop collection efforts. You focus on healing — we handle the paperwork.",
     ctaLabel: "Get Help With Medical Debt",
     image: assets.medicalDebt,
     imageAlt: "Compass Debt Solutions medical debt relief service",
