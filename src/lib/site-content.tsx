@@ -472,7 +472,7 @@ export const serviceItems: ReadonlyArray<ServiceItem> = [
     shortDescription: "Guidance for at-risk or already-repossessed vehicles.",
     heroSubtitle: "Protect your vehicle or recover it after repossession.",
     problem:
-      "Losing your vehicle can disrupt your entire life. Whether you're at risk of repossession or your car has already been taken, we can negotiate with your lender to find a solution.",
+      "Looking for help with a vehicle that has been repossessed, we cn potentially reduce the amount owed. Give us a ca",
     solution:
       "We step in immediately to negotiate with your lender — whether you're at risk of repossession or your vehicle has already been taken. Our goal is to recover your vehicle or settle the remaining balance for less.",
     ctaLabel: "Get Help With Vehicle Repossession",
