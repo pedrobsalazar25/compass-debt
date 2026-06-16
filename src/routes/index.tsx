@@ -98,7 +98,7 @@ function HomePage() {
           <div className="section-heading max-w-2xl">
             <p className="eyebrow">The Compass advantage</p>
             <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
-              A calm, flexible approach built to help you move forward faster
+              A calm, flexible approach built to help you navigate your debt options&nbsp;
             </h2>
           </div>
           <div className="mt-8 hidden md:grid gap-6 md:grid-cols-2 xl:grid-cols-4">
