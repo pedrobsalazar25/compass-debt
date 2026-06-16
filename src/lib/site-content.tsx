@@ -435,9 +435,9 @@ export const serviceItems: ReadonlyArray<ServiceItem> = [
     shortDescription: "Accelerated settlement within 24-48 months.",
     heroSubtitle: "Accelerate your path out of business debt in 24-48 months.",
     problem:
-      "Business debt can stifle your company's growth and keep you up at night. Whether you're still operating or have closed your doors, we can help negotiate a fresh start.",
+      "Business debt can stifle your company's growth and keep you up at night. \u00a0If your business is no longer on operation or dissolved, we can help reduce what I owed.",
     solution:
-      "We work directly with your business creditors to negotiate reduced settlements, often on an accelerated timeline. Whether your business is still operating or closed, we tailor our approach to your specific situation.",
+      "We work directly with your business creditors to negotiate reduced settlements, often on an accelerated timeline. If your business is closed, we tailor our approach to your specific situation.",
     ctaLabel: "Get Help With Business Debt",
     image: assets.businessDebt,
     imageAlt: "Compass Debt Solutions business debt settlement service",
