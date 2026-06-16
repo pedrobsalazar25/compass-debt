@@ -205,7 +205,7 @@ function HomePage() {
               </p>
               <p className="flex items-center gap-3">
                 <ShieldCheck className="h-4 w-4 text-primary" />
-                <span>Proudly serving Arizona and the Southwest</span>
+                <span>Nation-wide Coverage</span>
               </p>
             </div>
           </div>
