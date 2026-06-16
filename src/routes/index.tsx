@@ -258,7 +258,7 @@ function HomePage() {
             <div className="max-w-2xl space-y-3">
               <p className="eyebrow">Get started</p>
               <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
-                Talk through your debt options with a local team that listens.
+                Talk through your options with a certified debt specialist.&nbsp; CALL NOW!
               </h2>
             </div>
             <div className="flex flex-wrap gap-3">
