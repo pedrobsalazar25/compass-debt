@@ -179,7 +179,7 @@ function Footer() {
         <div className="space-y-4">
           <img src={assets.logo} alt="Compass Debt Solutions logo" className="h-12 w-auto" loading="lazy" />
           <p className="max-w-md text-sm leading-7 text-muted-foreground">{site.slogan}</p>
-          <p className="text-sm leading-7 text-muted-foreground">Proudly serving Arizona and the Southwest</p>
+          <p className="text-sm leading-7 text-muted-foreground">Nation-wide Coverage</p>
         </div>
         <div>
           <h2 className="font-display text-lg font-semibold text-foreground">Quick Links</h2>
