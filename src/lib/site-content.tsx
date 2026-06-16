@@ -474,7 +474,7 @@ export const serviceItems: ReadonlyArray<ServiceItem> = [
     problem:
       "Looking for help with a vehicle that has been repossessed, we cn potentially reduce the amount owed. Give us a ca",
     solution:
-      "We step in immediately to negotiate with your lender — whether you're at risk of repossession or your vehicle has already been taken. Our goal is to recover your vehicle or settle the remaining balance for less.",
+      "We step in on your behalf to settle the debt for less in it’s owed.",
     ctaLabel: "Get Help With Vehicle Repossession",
     image: assets.vehicleRepossession,
     imageAlt: "Compass Debt Solutions vehicle repossession support service",
