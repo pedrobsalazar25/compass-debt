@@ -261,7 +261,7 @@ export const homeFaqs: ReadonlyArray<FaqItem> = [
       "Most clients complete their program within 24 to 48 months. The timeline depends on your total debt amount and your monthly deposit schedule.",
   },
   {
-    question: "Will debt settlement affect my credit score?",
+    question: "",
     answer:
       "Debt settlement may impact your credit score, but for many clients, the benefit of becoming debt-free outweighs the temporary credit impact. Our specialists will walk through all the details during your free consultation.",
   },
