@@ -86,7 +86,7 @@ function HomePage() {
               </div>
               <div className="stat-pill bg-white/10 border-white/10 text-white backdrop-blur-md">
                 <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/70">Support</p>
-                <p className="mt-1.5 text-sm font-semibold text-white">One clear program payment</p>
+                <p className="mt-1.5 text-sm font-semibold text-white">Multiple debt relief options&nbsp;</p>
               </div>
             </div>
           </div>
