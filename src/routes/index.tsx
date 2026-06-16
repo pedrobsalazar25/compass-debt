@@ -215,7 +215,7 @@ function HomePage() {
       <section className="section-band">
         <div className="page-shell">
           <div className="section-heading max-w-2xl">
-            <p className="eyebrow">Client stories</p>
+            <p className="eyebrow">CLIENT TESTIMONIALS&nbsp;</p>
             <h2 className="font-display text-3xl font-semibold tracking-normal text-foreground md:text-4xl">
               Real relief starts with feeling understood
             </h2>
