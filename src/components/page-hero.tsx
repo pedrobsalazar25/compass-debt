@@ -8,7 +8,7 @@ interface PageHeroProps {
   image: string;
   imageAlt: string;
   eyebrow?: string;
-  align?: "left";
+  align?: "left" | "center";
   children?: ReactNode;
   priority?: boolean;
 }
