@@ -307,7 +307,7 @@ export const aboutAdvantages = [
     icon: Unlock,
   },
   {
-    title: "Aggressive Restructuring",
+    title: "Restructuring",
     description: "Direct creditor negotiation to settle for less than owed.",
     icon: Handshake,
   },
