@@ -328,7 +328,7 @@ export const serviceItems: ReadonlyArray<ServiceItem> = [
     problem:
       "Credit card debt can feel impossible to escape. With high interest rates piling up month after month, minimum payments barely make a dent. You deserve a faster way out.",
     solution:
-      "We negotiate directly with your credit card issuers to settle your balances for a fraction of what you owe. Our experienced team handles all communication while you make one affordable monthly deposit. Most clients see results within 24-48 months.",
+      "We negotiate directly with your credit card issuers to settle your balances for a fraction of what you owe. Our experienced team handles all communication while you make one affordable monthly deposit. Most clients get their first settlement with in the first 3-7 month of the program",
     ctaLabel: "Get Help With Credit Card Debt",
     image: assets.creditCardDebt,
     imageAlt: "Compass Debt Solutions credit card debt relief service",
