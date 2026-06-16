@@ -263,7 +263,7 @@ export const homeFaqs: ReadonlyArray<FaqItem> = [
   {
     question: "",
     answer:
-      "Debt settlement may impact your credit score, but for many clients, the benefit of becoming debt-free outweighs the temporary credit impact. Our specialists will walk through all the details during your free consultation.",
+      "\n",
   },
   {
     question: "What types of debt can you help with?",
