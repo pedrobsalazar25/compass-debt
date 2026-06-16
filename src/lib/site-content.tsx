@@ -451,7 +451,7 @@ export const serviceItems: ReadonlyArray<ServiceItem> = [
       {
         question: "How is business debt settlement different from personal?",
         answer:
-          "Business debt settlement follows a similar process, but timelines are often faster — typically 24–48 months. We also consider business-specific factors like revenue and assets.",
+          "Business debt settlement follows a similar process, but timelines are often faster — typically 24–48 months.\u00a0",
       },
       {
         question: "Will my personal credit be affected by business debt settlement?",
