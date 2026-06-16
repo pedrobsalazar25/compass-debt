@@ -57,7 +57,6 @@ function HomePage() {
         <div className="hero-overlay absolute inset-0" />
         <div className="page-shell relative py-20 md:py-32 lg:py-36">
           <div className="max-w-3xl space-y-8">
-            <p className="eyebrow bg-primary/20 text-white border-white/20 backdrop-blur-md">Debt relief in Chandler, Arizona</p>
             <h1 className="font-display text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl drop-shadow-sm">
               Navigating you to financial freedom&nbsp;
             </h1>
