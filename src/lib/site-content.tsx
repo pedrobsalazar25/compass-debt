@@ -261,11 +261,6 @@ export const homeFaqs: ReadonlyArray<FaqItem> = [
       "Most clients complete their program within 24 to 48 months. The timeline depends on your total debt amount and your monthly deposit schedule.",
   },
   {
-    question: "",
-    answer:
-      "\n",
-  },
-  {
     question: "What types of debt can you help with?",
     answer:
       "We handle credit cards, personal loans, medical bills, collections, business debt, vehicle repossession, and private student loans. We do not handle federal student loans, mortgages, or secured debt.",
