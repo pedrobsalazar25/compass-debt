@@ -364,7 +364,7 @@ export const serviceItems: ReadonlyArray<ServiceItem> = [
     problem:
       "Collection calls and mounting loan payments can take over your life. When you're juggling multiple personal loans, it's easy to fall behind. We help you regain control.",
     solution:
-      "Once you enroll, we direct all collector communication to our office — stopping the calls so you can breathe. We then negotiate lump-sum settlements with each creditor, often reducing your total debt significantly.",
+      "Once you enroll, we reach out to each of your creditors on your behalf. We then negotiate lump-sum settlements with each creditor, often reducing your total debt significantly.",
     ctaLabel: "Get Help With Unsecured Loans & Collections",
     image: assets.unsecuredLoans,
     imageAlt: "Compass Debt Solutions unsecured loans and collections support",
