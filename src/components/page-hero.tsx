@@ -19,7 +19,7 @@ export function PageHero({
   image,
   imageAlt,
   eyebrow,
-  align = "left",
+  align = "center",
   children,
   priority = false,
 }: PageHeroProps) {
