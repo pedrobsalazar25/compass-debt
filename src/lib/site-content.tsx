@@ -18,18 +18,18 @@ import {
   Calendar,
 } from "lucide-react";
 
-import aboutUsAsset from "@/assets/about-us.png.asset.json";
-import businessDebtAsset from "@/assets/business-debt-settlement.jpg.asset.json";
-import contactHeroAsset from "@/assets/contact-hero.png.asset.json";
-import creditCardDebtAsset from "@/assets/credit-card-debt-relief.png.asset.json";
-import heroAsset from "@/assets/hero.png.asset.json";
-import localTrustAsset from "@/assets/local-trust.png.asset.json";
-import logoAsset from "@/assets/compass-logo.png.asset.json";
-import medicalDebtAsset from "@/assets/medical-debt-relief.jpg.asset.json";
-import privateStudentLoansAsset from "@/assets/private-student-loans.png.asset.json";
-import unsecuredLoansAsset from "@/assets/unsecured-loans-collections.png.asset.json";
-import vehicleRepossessionAsset from "@/assets/vehicle-repossession-support.png.asset.json";
-import ctaBgAsset from "@/assets/cta-bg.png.asset.json";
+import aboutUsAsset from "@/assets/about-us.png";
+import businessDebtAsset from "@/assets/business-debt-settlement.jpg";
+import contactHeroAsset from "@/assets/contact-hero.png";
+import creditCardDebtAsset from "@/assets/credit-card-debt-relief.png";
+import heroAsset from "@/assets/hero.png";
+import localTrustAsset from "@/assets/local-trust.png";
+import logoAsset from "@/assets/compass-logo.png";
+import medicalDebtAsset from "@/assets/medical-debt-relief.jpg";
+import privateStudentLoansAsset from "@/assets/private-student-loans.png";
+import unsecuredLoansAsset from "@/assets/unsecured-loans-collections.png";
+import vehicleRepossessionAsset from "@/assets/vehicle-repossession-support.png";
+import ctaBgAsset from "@/assets/cta-bg.png";
 
 export type SitePath =
   | "/"
@@ -92,18 +92,18 @@ export const site = {
 } as const;
 
 export const assets = {
-  logo: logoAsset.url,
-  hero: heroAsset.url,
-  localTrust: localTrustAsset.url,
-  aboutUs: aboutUsAsset.url,
-  contactHero: contactHeroAsset.url,
-  creditCardDebt: creditCardDebtAsset.url,
-  unsecuredLoans: unsecuredLoansAsset.url,
-  medicalDebt: medicalDebtAsset.url,
-  businessDebt: businessDebtAsset.url,
-  vehicleRepossession: vehicleRepossessionAsset.url,
-  privateStudentLoans: privateStudentLoansAsset.url,
-  ctaBg: ctaBgAsset.url,
+  logo: logoAsset,
+  hero: heroAsset,
+  localTrust: localTrustAsset,
+  aboutUs: aboutUsAsset,
+  contactHero: contactHeroAsset,
+  creditCardDebt: creditCardDebtAsset,
+  unsecuredLoans: unsecuredLoansAsset,
+  medicalDebt: medicalDebtAsset,
+  businessDebt: businessDebtAsset,
+  vehicleRepossession: vehicleRepossessionAsset,
+  privateStudentLoans: privateStudentLoansAsset,
+  ctaBg: ctaBgAsset,
 } as const;
 
 export const desktopNavLinks: ReadonlyArray<{ label: string; path: SitePath }> = [
