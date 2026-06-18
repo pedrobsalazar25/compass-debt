@@ -60,7 +60,7 @@ function HomePage() {
             <h1 className="font-display text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl lg:whitespace-nowrap w-full drop-shadow-sm">
               Navigating you to financial freedom&nbsp;
             </h1>
-            <p className="max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl drop-shadow-sm">
+            <p className="max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl drop-shadow-sm pt-8 md:pt-16 lg:pt-24">
               {site.tagline}
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
