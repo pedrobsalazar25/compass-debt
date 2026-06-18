@@ -82,7 +82,7 @@ export interface ServiceItem {
 export const site = {
   companyName: "Compass Debt Solutions",
   slogan: "Your compass towards financial freedom.",
-  tagline: "Get help with your credit cards and unsecured debts now.",
+  tagline: "\n\n\n\n\n\n\n\nGet help with your credit cards and unsecured debts now.",
   domain: "compassdebtsolutions.com",
   phoneDisplay: "(480) 686-4116",
   phoneHref: "tel:+14806864116",
