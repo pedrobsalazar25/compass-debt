@@ -55,7 +55,7 @@ function HomePage() {
           fetchPriority="high"
         />
         <div className="hero-overlay absolute inset-0" />
-        <div className="page-shell relative pt-24 pb-20 md:pt-36 md:pb-32 lg:pt-44 lg:pb-36">
+        <div className="page-shell relative pt-4 pb-20 md:pt-6 md:pb-32 lg:pt-8 lg:pb-36">
           <div className="max-w-3xl lg:max-w-none w-full space-y-8">
             <h1 className="font-display text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl lg:whitespace-nowrap w-full drop-shadow-sm">
               Navigating you to financial freedom&nbsp;
