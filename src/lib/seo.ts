@@ -39,7 +39,7 @@ export function buildMeta({ title, description, path, keywords }: SeoInput) {
           "@type": "LocalBusiness",
           name: site.companyName,
           url: `https://${site.domain}${path === "/" ? "" : path}`,
-          telephone: "+1-480-686-4116",
+          telephone: "+1-623-323-3658",
           address: {
             "@type": "PostalAddress",
             streetAddress: "1542 W Maplewood St",
